@@ -84,7 +84,23 @@ p {
 .global-content {
   z-index: 2;
 }
+.precautions-content {
+  z-index: 2;
+}
 
+.precautions-content img {
+  width: 25em;
+  height: 25em;
+}
+
+.userCountryCases-content {
+  z-index: 2;
+}
+
+.userCountryCases-content img {
+  width: 7em;
+  height: 7em;
+}
 @media (max-width: 960px) {
   .conatiner {
     padding-right: 3rem;

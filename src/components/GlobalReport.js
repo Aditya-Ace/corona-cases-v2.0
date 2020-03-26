@@ -10,8 +10,9 @@ import Overlay from "./Overlay";
 const GlobalReport = () => {
   const [globalReport, setGlobalReport] = useState({});
   useEffect(() => {
+    let urlForGlobalReport = process.env.REACT_APP_WORLD_REPORT_API;
     axios
-      .get(process.env.REACT_APP_WORLD_REPORT_API)
+      .get(`${urlForGlobalReport}all`)
       .then(res => {
         console.log(res);
         setGlobalReport(res.data);
@@ -45,6 +46,9 @@ const GlobalReport = () => {
             </p>
             <Link to="/" className="btn">
               Go Back
+            </Link>
+            <Link to="/precautions" className="btn">
+              Precautions
             </Link>
           </>
         )}
