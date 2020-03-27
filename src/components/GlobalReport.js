@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import Moment from "react-moment";
 
 import Loader from "../assets/Loader.gif";
 
 import Overlay from "./Overlay";
+import { CoronaCasesContext } from "../context/CoronaCasesContext";
 
 const GlobalReport = () => {
-  const [globalReport, setGlobalReport] = useState({});
-  useEffect(() => {
-    let urlForGlobalReport = process.env.REACT_APP_WORLD_REPORT_API;
-    axios
-      .get(`${urlForGlobalReport}all`)
-      .then(res => {
-        console.log(res);
-        setGlobalReport(res.data);
-      })
-      .catch(error => console.log(error));
-  }, []);
+  const coronaCasesContext = useContext(CoronaCasesContext);
+  const globalReport = coronaCasesContext.globalReport;
 
   return (
     <>

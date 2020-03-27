@@ -101,6 +101,16 @@ p {
   width: 7em;
   height: 7em;
 }
+
+.searchothercountry-content {
+  z-index: 2;
+}
+
+.searchothercountry-content .search {
+  width: 30em;
+  height: 5em;
+}
+
 @media (max-width: 960px) {
   .conatiner {
     padding-right: 3rem;

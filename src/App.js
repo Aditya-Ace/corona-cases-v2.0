@@ -6,6 +6,7 @@ import VideoContent from "./components/VideoContent";
 import GlobalReport from "./components/GlobalReport";
 import Precaustions from "./components/Precautions";
 import UserCountryCases from "./components/UserCountryCases";
+import SearchOtherCountries from "./components/SearchOtherCountries";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
           <Route exact path="/userCountryCases">
             <BackgroundVideo />
             <UserCountryCases />
+          </Route>
+          <Route exact path="/searchothercountries">
+            <BackgroundVideo />
+            <SearchOtherCountries />
           </Route>
         </Switch>
       </Router>
