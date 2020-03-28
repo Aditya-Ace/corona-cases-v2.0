@@ -96,4 +96,8 @@ p {
     display: block;
     color: #fff;
   }
+
+  .video-content {
+    line-height: 1.5;
+  }
 }
