@@ -1,8 +1,6 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 
 import { CoronaCasesContext } from "../context/CoronaCasesContext";
-import Overlay from "./Overlay";
 
 const SearchOtherCountries = () => {
   const coronaCasesContext = useContext(CoronaCasesContext);
@@ -32,49 +30,35 @@ const SearchOtherCountries = () => {
   };
 
   return (
-    <>
-      <Overlay />
-      <div className="searchothercountry-content">
-        <h1>Search the COVID-19 cases in other Countries</h1>
-        <input
-          className="search"
-          type="text"
-          name="searchCountries"
-          placeholder="Search the Cases in other countries"
-          onChange={handleSearchEventChange}
-        />
-        <br />
-        <br />
-
-        {userSearchedCountry
-          ? userSearchedCountry.map((data, i) => {
-              return (
-                <div key={i}>
-                  <img src={data.countryInfo.flag} alt="Country Flag" />
-                  <p>CountryName : {data.country}</p>
-                  <p>Cases: {data.cases}</p>
-                  <p>Today's Cases: {data.todayCases}</p>
-                  <p>Death: {data.death}</p>
-                  <p>Today's Death: {data.todayDeaths}</p>
-                  <p>Recovered: {data.recovered}</p>
-                  <p>Active: {data.active}</p>
-                  <p>Critical: {data.critical}</p>
-                  <p>Cases per 1 Million: {data.casesPerOneMillion}</p>
-                  <p>Deaths per 1 Million: {data.deathsPerOneMillion}</p>
-                </div>
-              );
-            })
-          : null}
-        <br />
-        <br />
-        <Link to="/" className="btn">
-          Home
-        </Link>
-        <Link to="/userCountryCases" className="btn">
-          Go Back
-        </Link>
-      </div>
-    </>
+    <div className="searchothercountry-content">
+      <h1>Search the COVID-19 cases in other Countries</h1>
+      <input
+        className="search"
+        type="text"
+        name="searchCountries"
+        placeholder="Search the Cases in other countries"
+        onChange={handleSearchEventChange}
+      />
+      {userSearchedCountry
+        ? userSearchedCountry.map((data, i) => {
+            return (
+              <div key={i}>
+                <img src={data.countryInfo.flag} alt="Country Flag" />
+                <p>CountryName : {data.country}</p>
+                <p>Cases: {data.cases}</p>
+                <p>Today's Cases: {data.todayCases}</p>
+                <p>Death: {data.death}</p>
+                <p>Today's Death: {data.todayDeaths}</p>
+                <p>Recovered: {data.recovered}</p>
+                <p>Active: {data.active}</p>
+                <p>Critical: {data.critical}</p>
+                <p>Cases per 1 Million: {data.casesPerOneMillion}</p>
+                <p>Deaths per 1 Million: {data.deathsPerOneMillion}</p>
+              </div>
+            );
+          })
+        : null}
+    </div>
   );
 };
 

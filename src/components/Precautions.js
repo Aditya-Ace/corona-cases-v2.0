@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Precaution1 from "../assets/precaution_1.jpg";
 import Precaution2 from "../assets/precaution_2.jpg";
@@ -23,15 +22,6 @@ const Precaustions = () => {
       <img src={Precaution7} alt="Precaustions" />
       <img src={Precaution8} alt="Precaustions" />
       <img src={Precaution9} alt="Precaustions" />
-      <Link to="/" className="btn">
-        Home
-      </Link>
-      <Link to="/globalreport" className="btn">
-        Global Report
-      </Link>
-      <Link to="/userCountryCases" className="btn">
-        Cases in your Country
-      </Link>
     </div>
   );
 };
