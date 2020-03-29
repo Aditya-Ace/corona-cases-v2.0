@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Moment from "react-moment";
 
-import Loader from "../assets/Loader.gif";
 import Overlay from "./Overlay";
 import { CoronaCasesContext } from "../context/CoronaCasesContext";
 
@@ -16,7 +15,10 @@ const GlobalReport = () => {
           <Overlay />
           <div className="global-content">
             {!globalReport.cases ? (
-              <img src={Loader} alt="Loader" style={{ marginTop: "10em" }} />
+              // <img src={Loader} alt="Loader"  />
+              <div className="progress" style={{ marginTop: "10em" }}>
+                <div className="indeterminate"></div>
+              </div>
             ) : (
               <div className="userContent">
                 <h1>Global Report</h1>

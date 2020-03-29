@@ -2,8 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import Moment from "react-moment";
 
-import Loader from "../assets/Loader.gif";
-
 import Overlay from "./Overlay";
 import { CoronaCasesContext } from "../context/CoronaCasesContext";
 
@@ -39,7 +37,9 @@ const UserCountryCases = () => {
           <Overlay />
           <div className="userCountryCases-content">
             {!userCountryName || !userCountryData ? (
-              <img src={Loader} alt="Loader" />
+              <div className="progress" style={{ marginTop: "10em" }}>
+                <div className="indeterminate"></div>
+              </div>
             ) : (
               <div className="userContent">
                 <h1>Cases in {userCountryName}</h1>

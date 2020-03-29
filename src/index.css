@@ -20,6 +20,7 @@ nav {
 
 .nav-wrapper {
   z-index: 2;
+  backface-visibility: hidden;
 }
 
 h1 {
@@ -126,6 +127,10 @@ p {
   margin-top: 5em;
 }
 
+.search {
+  caret-color: red;
+}
+
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 30px;
@@ -164,11 +169,5 @@ p {
   .search-data {
     margin-top: 0.2;
     margin-bottom: 0.2;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .fullscreen-video-wrap {
-    height: 180%;
   }
 }
