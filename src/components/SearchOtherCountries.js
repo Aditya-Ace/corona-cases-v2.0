@@ -15,11 +15,10 @@ const SearchOtherCountries = () => {
       );
     }
     setUserSearchedCountry(
-      coronaCasesContext.countriesData.filter(data =>
-        data.country.includes(userSearchValue)
-      )
+      coronaCasesContext.countriesData
+        .filter(data => data.country.includes(userSearchValue))
+        .splice(0, 2)
     );
-
     if (userSearchValue === "America" || userSearchValue === "United States") {
       setUserSearchedCountry(
         coronaCasesContext.countriesData.filter(data =>
@@ -30,34 +29,127 @@ const SearchOtherCountries = () => {
   };
 
   return (
-    <div className="searchothercountry-content">
-      <h1>Search the COVID-19 cases in other Countries</h1>
-      <input
-        className="search"
-        type="text"
-        name="searchCountries"
-        placeholder="Search the Cases in other countries"
-        onChange={handleSearchEventChange}
-      />
-      {userSearchedCountry
-        ? userSearchedCountry.map((data, i) => {
-            return (
-              <div key={i}>
-                <img src={data.countryInfo.flag} alt="Country Flag" />
-                <p>CountryName : {data.country}</p>
-                <p>Cases: {data.cases}</p>
-                <p>Today's Cases: {data.todayCases}</p>
-                <p>Death: {data.death}</p>
-                <p>Today's Death: {data.todayDeaths}</p>
-                <p>Recovered: {data.recovered}</p>
-                <p>Active: {data.active}</p>
-                <p>Critical: {data.critical}</p>
-                <p>Cases per 1 Million: {data.casesPerOneMillion}</p>
-                <p>Deaths per 1 Million: {data.deathsPerOneMillion}</p>
-              </div>
-            );
-          })
-        : null}
+    <div className="container">
+      <div className="row">
+        <div className="col s12 searchCard">
+          <div className="searchothercountry-content ">
+            <h1 className="search-header">
+              Search the COVID-19 cases in other Countries
+            </h1>
+            <input
+              className="search"
+              type="text"
+              name="searchCountries"
+              placeholder="Search the Cases in other countries"
+              onChange={handleSearchEventChange}
+              style={{ color: "#fff", fontSize: "1.2em", marginTop: 0 }}
+            />
+            {userSearchedCountry
+              ? userSearchedCountry.map((data, i) => {
+                  return (
+                    <div className="search-data" key={i}>
+                      <table className="blue-grey darken-4 centered responsive-table">
+                        <thead>
+                          <tr style={{ color: "#fff" }}>
+                            <th>Country</th>
+                            <th>Cases</th>
+                            <th>Today's Cases</th>
+                            <th>Deaths</th>
+                            <th>Today's Death</th>
+                            <th>Recovered</th>
+                            <th>Active</th>
+                            <th>Critical</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <img
+                                src={data.countryInfo.flag}
+                                alt="Country Flag"
+                                className="flag"
+                              />
+                            </td>
+                            <td>
+                              <span
+                                style={{
+                                  color: "#C70039",
+                                  fontSize: "1em"
+                                }}
+                              >
+                                {Number(data.cases).toLocaleString()}
+                              </span>
+                            </td>
+                            <td>
+                              <span
+                                style={{
+                                  color: "#C70039",
+                                  fontSize: "1em"
+                                }}
+                              >
+                                {Number(data.todayCases).toLocaleString()}
+                              </span>
+                            </td>
+                            <td>
+                              <span
+                                style={{
+                                  color: "#C70039",
+                                  fontSize: "1em"
+                                }}
+                              >
+                                {Number(data.deaths).toLocaleString()}
+                              </span>
+                            </td>
+                            <td>
+                              <span
+                                style={{
+                                  color: "#C70039",
+                                  fontSize: "1em"
+                                }}
+                              >
+                                {Number(data.todayDeaths).toLocaleString()}
+                              </span>
+                            </td>
+                            <td>
+                              <span
+                                style={{
+                                  color: "#C70039",
+                                  fontSize: "1em"
+                                }}
+                              >
+                                {Number(data.recovered).toLocaleString()}
+                              </span>
+                            </td>
+                            <td>
+                              <span
+                                style={{
+                                  color: "#C70039",
+                                  fontSize: "1em"
+                                }}
+                              >
+                                {Number(data.active).toLocaleString()}
+                              </span>
+                            </td>
+                            <td>
+                              <span
+                                style={{
+                                  color: "#C70039",
+                                  fontSize: "1em"
+                                }}
+                              >
+                                {Number(data.critical).toLocaleString()}
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                })
+              : null}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

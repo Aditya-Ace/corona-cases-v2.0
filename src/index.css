@@ -46,6 +46,7 @@ p {
   height: 100vh;
   overflow: hidden;
   z-index: -99999;
+  background-color: #000;
 }
 
 .fullscreen-video-wrap video {
@@ -80,6 +81,51 @@ p {
   line-height: 2;
 }
 
+.userCountryCases-content {
+  z-index: 9999;
+  max-width: 100%;
+  max-height: 100%;
+  line-height: 2;
+  text-align: center;
+}
+
+.userContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.userContent-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2em;
+}
+
+.userContent-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2em;
+}
+
+.searchothercountry-content {
+  z-index: 9999;
+  max-width: 100%;
+  max-height: 100%;
+  line-height: 2;
+  text-align: center;
+}
+
+.flag {
+  width: 8em;
+  height: 5em;
+  margin: 0 auto;
+}
+
+.search-data {
+  margin-top: 1em;
+}
+
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 30px;
@@ -99,5 +145,24 @@ p {
 
   .video-content {
     line-height: 1.5;
+  }
+
+  .fullscreen-video-wrap {
+    height: 160%;
+  }
+
+  .search-header {
+    font-size: 18px;
+  }
+
+  .flag {
+    width: 3em;
+    height: 1.5em;
+    margin: 0 auto;
+  }
+
+  .search-data {
+    margin-top: 0.2;
+    margin-bottom: 0.2;
   }
 }
