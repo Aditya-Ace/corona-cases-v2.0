@@ -5,7 +5,7 @@ import Navigation from "./components/Navigation";
 import BackgroundVideo from "./components/BackgroundVideo";
 import VideoContent from "./components/VideoContent";
 import GlobalReport from "./components/GlobalReport";
-import Precaustions from "./components/Precautions";
+import Precautions from "./components/Precautions";
 import UserCountryCases from "./components/UserCountryCases";
 import SearchOtherCountries from "./components/SearchOtherCountries";
 
@@ -22,7 +22,7 @@ function App() {
           <GlobalReport />
         </Route>
         <Route exact path="/precautions">
-          <Precaustions />
+          <Precautions />
         </Route>
         <Route exact path="/userCountryCases">
           <UserCountryCases />
