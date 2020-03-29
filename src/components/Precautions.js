@@ -19,31 +19,31 @@ const Precaustions = () => {
         <div className="col s12">
           <Overlay />
           <div className="carousel carousel-slider center gallery">
-            <div className="carousel-item red white-text" href="#one!">
+            <div className="carousel-item" href="#one!">
               <img src={Precaution5} alt="Precaustions" />
             </div>
-            <div className="carousel-item amber white-text" href="#two!">
+            <div className="carousel-item" href="#two!">
               <img src={Precaution2} alt="Precaustions" />
             </div>
-            <div className="carousel-item green white-text" href="#three!">
+            <div className="carousel-item" href="#three!">
               <img src={Precaution3} alt="Precaustions" />
             </div>
-            <div className="carousel-item blue white-text" href="#four!">
+            <div className="carousel-item" href="#four!">
               <img src={Precaution4} alt="Precaustions" />
             </div>
-            <div className="carousel-item blue white-text" href="#five!">
+            <div className="carousel-item" href="#five!">
               <img src={Precaution1} alt="Precaustions" />
             </div>
-            <div className="carousel-item blue white-text" href="#six!">
+            <div className="carousel-item" href="#six!">
               <img src={Precaution6} alt="Precaustions" />
             </div>
-            <div className="carousel-item blue white-text" href="#seven!">
+            <div className="carousel-item" href="#seven!">
               <img src={Precaution7} alt="Precaustions" />
             </div>
-            <div className="carousel-item blue white-text" href="#eight!">
+            <div className="carousel-item" href="#eight!">
               <img src={Precaution8} alt="Precaustions" />
             </div>
-            <div className="carousel-item blue white-text" href="#nine!">
+            <div className="carousel-item" href="#nine!">
               <img src={Precaution9} alt="Precaustions" />
             </div>
           </div>
