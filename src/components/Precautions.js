@@ -1,5 +1,7 @@
 import React from "react";
 
+import Overlay from "./Overlay";
+
 import Precaution1 from "../assets/precaution_1.jpg";
 import Precaution2 from "../assets/precaution_2.jpg";
 import Precaution3 from "../assets/precaution_3.jpg";
@@ -12,16 +14,41 @@ import Precaution9 from "../assets/precaution_9.jpg";
 
 const Precaustions = () => {
   return (
-    <div className="precautions-content">
-      <img src={Precaution1} alt="Precaustions" />
-      <img src={Precaution2} alt="Precaustions" />
-      <img src={Precaution3} alt="Precaustions" />
-      <img src={Precaution4} alt="Precaustions" />
-      <img src={Precaution5} alt="Precaustions" />
-      <img src={Precaution6} alt="Precaustions" />
-      <img src={Precaution7} alt="Precaustions" />
-      <img src={Precaution8} alt="Precaustions" />
-      <img src={Precaution9} alt="Precaustions" />
+    <div className="container">
+      <div className="row">
+        <div className="col s12">
+          <Overlay />
+          <div className="carousel carousel-slider center gallery">
+            <div className="carousel-item red white-text" href="#one!">
+              <img src={Precaution5} alt="Precaustions" />
+            </div>
+            <div className="carousel-item amber white-text" href="#two!">
+              <img src={Precaution2} alt="Precaustions" />
+            </div>
+            <div className="carousel-item green white-text" href="#three!">
+              <img src={Precaution3} alt="Precaustions" />
+            </div>
+            <div className="carousel-item blue white-text" href="#four!">
+              <img src={Precaution4} alt="Precaustions" />
+            </div>
+            <div className="carousel-item blue white-text" href="#five!">
+              <img src={Precaution1} alt="Precaustions" />
+            </div>
+            <div className="carousel-item blue white-text" href="#six!">
+              <img src={Precaution6} alt="Precaustions" />
+            </div>
+            <div className="carousel-item blue white-text" href="#seven!">
+              <img src={Precaution7} alt="Precaustions" />
+            </div>
+            <div className="carousel-item blue white-text" href="#eight!">
+              <img src={Precaution8} alt="Precaustions" />
+            </div>
+            <div className="carousel-item blue white-text" href="#nine!">
+              <img src={Precaution9} alt="Precaustions" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -36,6 +36,13 @@
         var elems = document.querySelectorAll(".sidenav");
         M.Sidenav.init(elems);
       });
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".carousel");
+        M.Carousel.init(elems, {
+          fullWidth: true,
+          indicators: true
+        });
+      });
     </script>
     <script
       type="text/javascript"
